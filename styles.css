@@ -4,3 +4,16 @@
 .track{height:18px;margin:12px 0 6px}.chart-title{margin:18px 0 8px}.chart-layout{display:flex;align-items:center;gap:18px;margin:12px 0}.pay-pie{width:142px;height:142px;border-radius:50%;flex:0 0 142px;border:2px solid var(--line);background:var(--panel2)}.pie-legend{display:grid;gap:8px;flex:1;min-width:0}.legend-row{display:flex;align-items:flex-start;gap:7px;font-size:.78rem}.legend-dot{width:10px;height:10px;flex:0 0 10px;border-radius:50%;margin-top:4px}.legend-text{display:flex;justify-content:space-between;gap:5px;flex:1;min-width:0}.legend-text span:first-child{overflow-wrap:anywhere}.legend-text strong{white-space:nowrap}@media(max-width:350px){.chart-layout{gap:10px}.pay-pie{width:112px;height:112px;flex-basis:112px}.legend-row{font-size:.72rem}}
 
 .day-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px;margin:12px 0}.day-tile{border:1px solid var(--line);border-radius:9px;min-height:42px;padding:5px 2px;background:var(--panel2);color:var(--text);text-align:center;font:inherit;font-size:.8rem;font-weight:750;cursor:pointer}.day-tile small{display:block;font-size:.59rem;opacity:.82}.day-tile.logged{background:#416ba9;color:#fff;border-color:#628fe1}.day-tile.no-spend{background:linear-gradient(135deg,#ae7624,#ffe397 43%,#d9a23c 64%,#fae2a0);color:#3d280a;border-color:#f5d489;box-shadow:inset 0 1px 2px #fff9,0 0 8px #eab74e4d}.day-tile.future{opacity:.46;cursor:default}.day-tile.selected{outline:2px solid var(--accent);outline-offset:2px}.checkin-key{display:flex;flex-wrap:wrap;gap:8px 13px;margin:10px 0 15px;color:var(--muted);font-size:.72rem}.checkin-key span{display:flex;gap:5px;align-items:center}.key-dot{display:inline-block;width:10px;height:10px;border-radius:3px}.key-dot.logged{background:#416ba9}.key-dot.no-spend{background:linear-gradient(135deg,#ae7624,#ffe397,#d9a23c)}.key-dot.pending{background:var(--panel2);border:1px solid var(--line)}.checkin-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}.checkin-actions button{padding:10px 7px;font-size:.82rem}#what-if{margin:9px 0 4px}#recap-content .row{border-top:1px solid var(--line);padding:10px 0}#recap-content .row:first-child{border-top:0}
+
+/* Keep the compact paycheque chart readable on phone screens. */
+[hidden]{display:none!important}
+.legend-text span:first-child{overflow-wrap:normal;word-break:normal}
+@media(max-width:600px){
+ .chart-layout{flex-direction:column;align-items:center;gap:14px}
+ .pay-pie{width:142px;height:142px;flex:0 0 142px}
+ .pie-legend{width:100%;gap:9px}
+ .legend-row{font-size:.86rem;align-items:center}
+ .legend-dot{margin-top:0}
+ .legend-text{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:baseline}
+ .legend-text span:first-child{white-space:nowrap}
+}
