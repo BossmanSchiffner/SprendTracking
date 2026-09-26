@@ -18,6 +18,7 @@
 /* Keep the compact paycheque chart readable on phone screens. */
 [hidden]{display:none!important}
 .legend-text span:first-child{overflow-wrap:normal;word-break:normal}
+.dialog-form label{display:block}.dialog-form label input,.dialog-form label select{display:block;margin-top:6px}
 @media(max-width:600px){
  .chart-layout{flex-direction:column;align-items:center;gap:14px}
  .pay-pie{width:142px;height:142px;flex:0 0 142px}
